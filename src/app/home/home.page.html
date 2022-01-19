@@ -13,8 +13,16 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list lines="none">
+    <ion-item>
+      <ion-label>Change Select Labels</ion-label>
+      <ion-button (click)="changeLabels()">Toggle Language</ion-button>
+    </ion-item>
+    <ion-select
+      [value]="selectedPhrase"
+      (ionChange)="selectedPhrase = $event.detail.value"
+      >
+      <ion-select-option *ngFor="let phrase of phrases" [value]="phrase">{{phrase.label}}</ion-select-option>
+    </ion-select>
+  </ion-list>
 </ion-content>
