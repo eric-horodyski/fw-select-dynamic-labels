@@ -1,0 +1,7 @@
+{
+  "name": "fw-select-dynamic-labels",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
